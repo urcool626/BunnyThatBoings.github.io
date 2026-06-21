@@ -1,212 +1,121 @@
-    
-    /* -------------------------------------------------------
-       EDIT PLACEMENTS HERE // DO NOT TOUCH ANYTHING ELSE
-    ------------------------------------------------------- */
-    
-    const videos = [
-		
-      { name: "Society", url: "https://www.youtube.com/watch?v=0xQia-RHC0E", thumb: "https://thumbnails.demonlist.org/classic/3393.png", tags: ["ship", "UFO", "wave", "nerve control", "timings", "chokepoints"]},
-      { name: "Amethyst", url: "https://www.youtube.com/watch?v=4lfkzz1VCbA", tags: ["wave", "chokepoints", "long"]},
-      { name: "Thinking Space II", url: "https://www.youtube.com/watch?v=CELNmHwln_c", tags: ["ship", "wave", "high CPS", "nerve control", "chokepoints", "long"]},
-      { name: "Flamewall", url: "https://www.youtube.com/watch?v=x4Io4zkWVRw", tags: ["nerve control", "XXL+"]},
-      { name: "Tidal Wave", url: "https://www.youtube.com/watch?v=9fsZ014qB3s", tags: ["wave", "XXL+"]},
-	  { name: "Green Bullet", url: "https://www.youtube.com/watch?v=JG-qcvVkZFw", tags: ["cube", "wave", "robot"]},
-      { name: "ORBIT", url: "https://www.youtube.com/watch?v=QKcv8DkNPd0", tags: ["cube", "ball", "memory", "nerve control", "timings"]},
-      { name: "SARY NEVER CLEAR", url: "https://www.youtube.com/watch?v=Hpo77uVq75M", thumb: "https://i.ytimg.com/vi/iij_DGexKvg/maxresdefault.jpg", tags: ["cube", "timings", "chokepoints", "long"]},
-      { name: "Nullscapes", url: "https://www.youtube.com/watch?v=EztneTPp5CU", tags: ["robot", "timings", "long"]},
-      { name: "Quanteuse processing", url: "https://www.youtube.com/watch?v=j5NC0u1Q91Q", tags: ["memory", "high CPS", "chokepoints", "long"]},
-      { name: "BOOBAWAMBA", url: "https://www.youtube.com/watch?v=20fYiqLAo_E", tags: ["memory", "XL"]},
-      { name: "Sakupen circles", url: "https://www.youtube.com/watch?v=AdrmZsy52EY", tags: ["wave", "high CPS", "chokepoints"]},
-      { name: "Herr Machine", url: "https://www.youtube.com/watch?v=CBcQqmqWFo4", tags: ["memory", "timings", "chokepoints", "long"]},
-      { name: "Every End", url: "https://www.youtube.com/watch?v=AO--mVVFtKI", tags: ["cube", "nerve control", "timings", "XXL+"]},
-      { name: "Lesopowal", url: "https://www.youtube.com/watch?v=RTXnFHkGO_g", tags: ["chokepoints", "long"]},
-      { name: "Penumbral", url: "https://www.youtube.com/watch?v=nVHPFf13M-I", tags: ["ball", "UFO", "timings", "chokepoints", "long"]},
-      { name: "Ultra Paracosm", url: "https://www.youtube.com/watch?v=4V24spYQWuE", tags: ["wave", "long"]},
-      { name: "Subconscious", url: "https://www.youtube.com/watch?v=lBXO2CTEMfs", tags: ["ship", "long"]},
-      { name: "Ashley Wave Trials", url: "https://www.youtube.com/watch?v=aTxt76U3e2Q", tags: ["wave", "nerve control", "XL"]},
-      { name: "Subsuming Vortex", url: "https://www.youtube.com/watch?v=0eYG1ogJpIQ", tags: ["wave", "chokepoints", "long"]},
-      { name: "Old Orochi", url: "https://www.youtube.com/watch?v=YxtFAQtLYQY", tags: ["ship", "nerve control", "long"]},
-      { name: "Silent clubstep", url: "https://www.youtube.com/watch?v=GR4OMkS3SN8", tags: ["cube", "ship", "memory", "nerve control", "timings", "chokepoints", "long"]},
-      { name: "andromeda", url: "https://www.youtube.com/watch?v=3PuK6AFY3BI", tags: ["timings", "long"]},
-      { name: "KILLSTEALER", url: "https://www.youtube.com/watch?v=uhH4oqWrsfo", tags: ["XXL+"]},
-      { name: "Aquamarine", url: "https://www.youtube.com/watch?v=Q__EnRojGt4", tags: ["wave", "high CPS", "chokepoints"]},
-      { name: "Avernus", url: "https://www.youtube.com/watch?v=16Zh8jssanc", tags: ["ship", "ufo", "wave", "chokepoints", "long"]},
-      { name: "Anathema", url: "https://www.youtube.com/watch?v=_uKwmjHmySI", tags: ["swing copter", "nerve control", "XXL+"]},
-      { name: "Diabolic ClubStep", url: "https://www.youtube.com/watch?v=WHOfO0OxbvM", thumb: "https://i.ytimg.com/vi/ihNvOzgE8Sk/maxresdefault.jpg", tags: ["ship", "wave", "timings", "chokepoints", "long"]},
-      { name: "Acheron", url: "https://www.youtube.com/watch?v=sBKR6aUorzA", thumb: "https://i.ytimg.com/vi/RMRBhZJrgkw/mqdefault.jpg", tags: ["cube", "ship", "ball", "ufo", "timings", "long"]},
-      { name: "Spectre", url: "https://www.youtube.com/watch?v=MzsSLKJrLSI", tags: ["nerve control", "XXL+"]},
-      { name: "roses and flowers", url: "https://www.youtube.com/watch?v=5QeIp5fC1hE", tags: ["wave", "high CPS", "chokepoints", "long"]},
-      { name: "Menace", url: "https://www.youtube.com/watch?v=nnkgghxxsEE", tags: ["swing", "memory", "nerve control", "timings", "XXL+"]},
-      { name: "Abyss of Darkness", url: "https://www.youtube.com/watch?v=ejJkpqcMMCY", tags: ["spider", "nerve control", "timings", "chokepoints", "XL"]},
-      { name: "Abyss of Darkness", url: "https://www.youtube.com/watch?v=RWBEfS4mLbw", tags: ["spider", "nerve control", "timings", "chokepoints", "XL"]},
-      { name: "The Bloop", url: "https://www.youtube.com/watch?v=ROuXHSKEhHA", tags: ["wave", "chokepoints", "long"]},
-      { name: "Defeated Circles", url: "https://www.youtube.com/watch?v=nU5AQPzd2YA", tags: ["wave", "chokepoints", "long"]},
-      { name: "SWI Slithium", url: "https://www.youtube.com/watch?v=av5D0_M6hso", tags: ["wave", "nerve control", "chokepoints", "XL"]},
-      { name: "Tunnel of Despair", url: "https://www.youtube.com/watch?v=LpS4JREhW98", tags: ["cube", "ship", "wave", "chokepoints", "long"]},
-      { name: "Kyouki", url: "https://www.youtube.com/watch?v=KDa5c0CJTHs", tags: ["timings", "long"]},
-      { name: "Based After Based", url: "https://www.youtube.com/watch?v=yQBFyUvB3lY", tags: ["ship", "memory", "long"]},
-      { name: "Subterminal Point", url: "https://www.youtube.com/watch?v=h2wmRMgACH4", tags: ["timings", "long"]},
-      { name: "Slaughterhouse", url: "https://www.youtube.com/watch?v=kpcF1-QAHQc", tags: ["wave", "high CPS", "chokepoints", "long"]},
-      { name: "Thinking Space II", url: "https://www.youtube.com/watch?v=RJedeB2wHCA", tags: ["ship", "wave", "high CPS", "nerve control", "chokepoints", "long"]},
-      { name: "KOCMOC", url: "https://www.youtube.com/watch?v=RsOVrVlcE2g", tags: ["wave", "high CPS", "long"]},
-      { name: "Map Of Problematique", url: "https://www.youtube.com/watch?v=Sm0UvvwOE08", tags: ["nerve control", "XL"]},
-      { name: "CHIL", url: "https://www.youtube.com/watch?v=DROMiCc2ZRM", tags: ["memory", "high CPS", "long"]},
-      { name: "zorin", url: "https://www.youtube.com/watch?v=U19vmpenb9g", tags: ["cube", "ship", "ball", "wave", "swing", "XL"]},
-      { name: "wocky circles", url: "https://www.youtube.com/watch?v=yOx5Q3BkWIg", tags: ["wave"]},
-      { name: "The Lightning Rod", url: "https://www.youtube.com/watch?v=nQDTi077O6M", tags: ["memory", "timings", "long"]},
-      { name: "Deimos", url: "https://www.youtube.com/watch?v=b2yHaIk5zio", tags: ["XL"]},
-      
-    ];
+/* -------------------------------------------------------
+   LOAD DATA FROM lists.json
+------------------------------------------------------- */
 
-    /* -------------------------------------------------------
-       FUTURE LIST — edit unverified levels here
-       Each entry: { name, url, progress (0–100) }
-       The first entry will always appear at the top with
-       the unverified styling and progress bar.
-    ------------------------------------------------------- */
+async function loadData() {
+  try {
+    const response = await fetch("lists.json");
+    if (!response.ok) throw new Error("Failed to load lists.json");
+    return await response.json();
+  } catch (err) {
+    console.error("JSON load error:", err);
+    return { videos: [], futureVideos: [] };
+  }
+}
 
-    const futureVideos = [
+/* -------------------------------------------------------
+   TAG BUILDER
+------------------------------------------------------- */
 
-      { name: "KOCMOC UNLEASHED", url: "https://www.youtube.com/watch?v=cnEQHGQ4gbI", thumb: "https://i.ytimg.com/vi/A8xtT5qYAfc/maxresdefault.jpg", progress: 68, unverified: true},
-      { name: "Vehemence", url: "https://www.youtube.com/watch?v=E6Q80ud1EaY", thumb: "https://i.ytimg.com/vi/eMDGeJthWsc/maxresdefault.jpg", progress: 41, unverified: true},
-      { name: "Sweeping Demon II", url: "https://www.youtube.com/watch?v=L8DeyBdD9oc", thumb: "https://bing.com/th/id/OVP.KNxpSrSqZ79j53wRc41QcQHgFo?w=424&h=238&c=7&rs=1&qlt=90&o=6&pid=1.7&adlt=strict", progress: 86, unverified: true},
-      { name: "Society", url: "https://www.youtube.com/live/0xQia-RHC0E", thumb: "https://thumbnails.demonlist.org/classic/3393.png"},
-      { name: "GRIEF", url: "https://www.youtube.com/watch?v=Emd2tWP2FkI", thumb: "https://i.ytimg.com/vi/yoLtaqEMZgA/maxresdefault.jpg", progress: 97, unverified: true},
-      { name: "Heliopolis", url: "https://www.youtube.com/watch?v=Hld_6Bmzu8M", thumb: "https://i.ytimg.com/vi/7yaKGl_2Dsw/maxresdefault.jpg", progress: 51, unverified: true},
-      { name: "Amethyst", url: "https://www.youtube.com/watch?v=4lfkzz1VCbA" },
-      { name: "Azure Flare", url: "https://www.youtube.com/watch?v=PeT5GAsu-rM", thumb: "https://i.ytimg.com/vi/PM1uFPYGBIA/maxresdefault.jpg", progress: 44, unverified: true},
-      { name: "Misanthrope", url: "https://www.youtube.com/watch?v=1WJ_FM1ODbw", thumb: "https://i.ytimg.com/vi/jd8JvTZDpwM/maxresdefault.jpg", progress: 41, unverified: true},
-      { name: "Thinking Space II", url: "https://www.youtube.com/watch?v=CELNmHwln_c" },
-      { name: "Flamewall", url: "https://www.youtube.com/watch?v=x4Io4zkWVRw" },
-      { name: "Antarctic Lights", url: "https://www.youtube.com/watch?v=D5HC5DUj0d8", thumb: "https://bing.com/th/id/OVP.RLC5feYhIeUdM3bK9eAxmwHgFo?w=424&h=238&c=7&rs=1&qlt=90&o=6&pid=1.7&adlt=strict", progress: 90, unverified: true},
-      { name: "Silent Circles", url: "https://www.youtube.com/watch?v=3ANI557EzW8", progress: 58, unverified: true},
-      { name: "Old Blade of Justice", url: "https://www.youtube.com/watch?v=LnSlXVOnG2Y", progress: 29, unverified: true},
-      { name: "Angelicide", url: "https://www.youtube.com/watch?v=dqkMUi7J7TY", thumb: "https://i.ytimg.com/vi/aZpeMB3rtJI/maxresdefault.jpg", progress: 33, unverified: true},
-      { name: "Tidal Wave", url: "https://www.youtube.com/watch?v=9fsZ014qB3s" },
-      { name: "Silent Acropolis", url: "https://www.youtube.com/watch?v=0M-cjzSJY7s", progress: 69, unverified: true},
-      { name: "silent Acropolis", url: "https://www.youtube.com/watch?v=4oV6fgdo4Eo", progress: 66, unverified: true},
-      { name: "It Means Everything", url: "https://youtube.com/watch?v=HUvZzy00Rek", progress: 74, unverified: true},
-	    { name: "Green Bullet", url: "https://www.youtube.com/watch?v=JG-qcvVkZFw" },
-      { name: "BANSHEE", url: "https://www.youtube.com/watch?v=AkAcvx32BII", progress: 86, unverified: true},
-      { name: "Labryinth", url: "https://www.youtube.com/watch?v=bvU88Sm5Naw", progress: 68, unverified: true},
-      { name: "Africa Circles", url: "https://www.youtube.com/watch?v=UHVqmFxujbA", thumb: "https://bing.com/th/id/OVP.zq65fC-ZYWDZwQ9QYRzN_wEsDh?w=424&h=238&c=7&rs=1&qlt=90&o=6&pid=1.7&adlt=strict", progress: 61, unverified: true},
-      { name: "ORBIT", url: "https://www.youtube.com/watch?v=QKcv8DkNPd0" },
-      { name: "Eternal Silence", url: "https://www.youtube.com/watch?v=by88qCcfKkM", thumb: "https://i.ytimg.com/vi/nAf6iD9al9w/maxresdefault.jpg", progress: 74, unverified: true},
-      { name: "SARY NEVER CLEAR", url: "https://www.youtube.com/watch?v=Hpo77uVq75M", thumb: "https://i.ytimg.com/vi/iij_DGexKvg/maxresdefault.jpg"},
-      { name: "Tunnel of Serpent", url: "https://www.youtube.com/watch?v=M0ZY-laukRg", progress: 58, unverified: true},
-      { name: "Nullscapes", url: "https://www.youtube.com/watch?v=EztneTPp5CU" },
-	    { name: "Exasperation", url: "https://www.youtube.com/watch?v=v9rpMj2iJb4", thumb: "https://th.bing.com/th/id/R.167af68e45e71417deb6dc1a5a74b934?rik=Dr2OmdCNFrB11A&pid=ImgRaw&r=0", progress: 67, unverified: true},
-      { name: "Quanteuse processing", url: "https://www.youtube.com/watch?v=j5NC0u1Q91Q" },
-      { name: "BOOBAWAMBA", url: "https://www.youtube.com/watch?v=20fYiqLAo_E" },
-      { name: "Sakupen circles", url: "https://www.youtube.com/watch?v=AdrmZsy52EY" },
-      { name: "Herr Machine", url: "https://www.youtube.com/watch?v=CBcQqmqWFo4" },
-      { name: "Silent Clubstep II", url: "https://www.youtube.com/watch?v=QxQmap48MDA", progress: 31, unverified: true},
-      { name: "Every End", url: "https://www.youtube.com/watch?v=AO--mVVFtKI" },
-      { name: "Silent Oppenheimer", url: "https://www.youtube.com/watch?v=8qDtiDYbKPA", thumb: "https://i.ytimg.com/vi/Q-IT8xuqU9Q/maxresdefault.jpg", progress: 67, unverified: true},
-      { name: "Lesopowal", url: "https://www.youtube.com/watch?v=RTXnFHkGO_g" },
-      { name: "Penumbral", url: "https://www.youtube.com/watch?v=nVHPFf13M-I" },
-      { name: "Ultra Paracosm", url: "https://www.youtube.com/watch?v=4V24spYQWuE" },
-      { name: "Subconscious", url: "https://www.youtube.com/watch?v=lBXO2CTEMfs" },
-      { name: "Ashley Wave Trials", url: "https://www.youtube.com/watch?v=aTxt76U3e2Q" },
-      { name: "CYBERPSYCHOSIS", url: "https://www.youtube.com/watch?v=M1X24uXAAGY", progress: 52, unverified: true},
-      { name: "Subsuming Vortex", url: "https://www.youtube.com/watch?v=0eYG1ogJpIQ" },
-      { name: "Minus World", url: "https://www.youtube.com/watch?v=NGSigVwuDUg", thumb: "https://i.ytimg.com/vi/apiLRRNoefI/maxresdefault.jpg", progress: 69, unverified: true},
-      { name: "Old Orochi", url: "https://www.youtube.com/watch?v=YxtFAQtLYQY" },
-      { name: "Silent clubstep", url: "https://www.youtube.com/watch?v=GR4OMkS3SN8" },
-      { name: "andromeda", url: "https://www.youtube.com/watch?v=3PuK6AFY3BI" },
-	    { name: "KILLSTEALER", url: "https://www.youtube.com/watch?v=uhH4oqWrsfo" },
-      { name: "Aquamarine", url: "https://www.youtube.com/watch?v=Q__EnRojGt4" },
-      { name: "Avernus", url: "https://www.youtube.com/watch?v=16Zh8jssanc" },
-      { name: "Anathema", url: "https://www.youtube.com/watch?v=_uKwmjHmySI" },
-	
-    ];
+function buildTagsHTML(tags) {
+  if (!tags || tags.length === 0) return "";
+  return `<div class="tags">${tags
+    .map(t => `<span class="tag">${t}</span>`)
+    .join("")}</div>`;
+}
 
-    /* -------------------------------------------------------
-       DO NOT TOUCH ANYTHING BELOW
-    ------------------------------------------------------- */
+/* -------------------------------------------------------
+   YOUTUBE ID PARSER
+------------------------------------------------------- */
 
-    function buildTagsHTML(tags) {
+function getVideoId(url) {
+  const match = url.match(/[?&]v=([^&]+)/);
+  return match ? match[1] : null;
+}
 
-      if (!tags || tags.length === 0) return '';
-      return `<div class="tags">${tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+/* -------------------------------------------------------
+   LIST BUILDER
+------------------------------------------------------- */
 
+function buildList(container, items, startRank) {
+  for (let l = 0; l < items.length; l++) {
+    const v = items[l];
+    const rank = startRank + l;
+    const id = getVideoId(v.url);
+
+    const thumbSrc =
+      v.thumb || (id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : null);
+
+    const thumbHTML = thumbSrc
+      ? `<img src="${thumbSrc}" alt="thumbnail" />`
+      : `<span class="play-tri"></span>`;
+
+    const a = document.createElement("a");
+    a.href = v.url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+
+    if (v.unverified) {
+      a.classList.add("unverified-item");
+      const pct = Math.min(100, Math.max(0, v.progress ?? 0));
+
+      a.innerHTML = `
+        <div class="thumb thumb-overlay-wrap">
+          ${thumbHTML}
+          <div class="unverified-label">Unverified</div>
+        </div>
+        <div class="info">
+          <div class="name">${v.name}</div>
+          <div class="url">${pct}% progress</div>
+          ${buildTagsHTML(v.tags)}
+        </div>
+        <div class="rank">
+          <div>${String(rank).padStart(2, "0")}</div>
+          <div class="unverified-badge">Unverified</div>
+        </div>`;
+    } else {
+      a.innerHTML = `
+        <div class="thumb">${thumbHTML}</div>
+        <div class="info">
+          <div class="name">${v.name}</div>
+          <div class="url">${v.url}</div>
+          ${buildTagsHTML(v.tags)}
+        </div>
+        <div class="rank">${String(rank).padStart(2, "0")}</div>`;
     }
 
-    function getVideoId(url) {
-      
-      const match = url.match(/[?&]v=([^&]+)/);
-      return match ? match[1] : null;
-      
-    }
+    container.appendChild(a);
+  }
+}
 
-    function buildList(container, items, startRank) {
+/* -------------------------------------------------------
+   INITIALIZE PAGE
+------------------------------------------------------- */
 
-      for (let l = 0; l < items.length; l++) {
+loadData().then(data => {
+  const { videos, futureVideos } = data;
 
-        const v = items[l];
-        const rank = startRank + l;
-        const id = getVideoId(v.url);
-        const thumbSrc = v.thumb || (id ? `https://img.youtube.com/vi/${id}/mqdefault.jpg` : null);
-        const thumbHTML = thumbSrc
-          ? `<img src="${thumbSrc}" alt="thumbnail" />`
-          : `<span class="play-tri"></span>`;
+  buildList(document.getElementById("list"), videos, 1);
+  buildList(document.getElementById("future-list"), futureVideos, 1);
+});
 
-        const a = document.createElement('a');
-        a.href = v.url;
-        a.target = '_blank';
-        a.rel = 'noopener noreferrer';
+/* -------------------------------------------------------
+   TAB SWITCHING
+------------------------------------------------------- */
 
-        if (v.unverified) {
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.dataset.tab;
 
-          a.classList.add('unverified-item');
-          const pct = Math.min(100, Math.max(0, v.progress ?? 0));
+    document
+      .querySelectorAll(".tab-btn")
+      .forEach(b => b.classList.remove("active"));
 
-          a.innerHTML = `
-            <div class="thumb thumb-overlay-wrap">
-              ${thumbHTML}
-              <div class="unverified-label">Unverified</div>
-            </div>
-            <div class="info">
-              <div class="name">${v.name}</div>
-              <div class="url">${pct}% progress</div>
-              ${buildTagsHTML(v.tags)}
-            </div>
-            <div class="rank">
-              <div>${String(rank).padStart(2, '0')}</div>
-              <div class="unverified-badge">Unverified</div>
-            </div>`;
+    document
+      .querySelectorAll(".tab-panel")
+      .forEach(p => p.classList.remove("active"));
 
-        } else {
-
-          a.innerHTML = `
-            <div class="thumb">${thumbHTML}</div>
-            <div class="info">
-              <div class="name">${v.name}</div>
-              <div class="url">${v.url}</div>
-              ${buildTagsHTML(v.tags)}
-            </div>
-            <div class="rank">${String(rank).padStart(2, '0')}</div>`;
-
-        }
-
-        container.appendChild(a);
-      }
-    }
-
-    // Build main list
-    buildList(document.getElementById('list'), videos, 1);
-
-    // Build future list in the exact order defined above
-    buildList(document.getElementById('future-list'), futureVideos, 1);
-
-    // Tab switching
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = btn.dataset.tab;
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        document.getElementById('panel-' + target).classList.add('active');
-      });
-    });
-    
+    btn.classList.add("active");
+    document.getElementById("panel-" + target).classList.add("active");
+  });
+});
